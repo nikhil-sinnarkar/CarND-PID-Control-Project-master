@@ -1,7 +1,6 @@
 # Rubric points
 ---
 ## Compilations
----
 ### Your code should compile
 The code compiles without errors.
 
@@ -10,7 +9,6 @@ The code compiles without errors.
 The base algorithm is whats presented in lessons. The tuning of parameters was done manually.
 
 ## Reflection
----
 ### Describe the effect each of the P, I, D components had in your implementation.
 * **P Controller** : Without any of the control the vehicle drives in a straight line and goes out of the track as soon as it encounters a turn. The P controller is the proportional controller. Here the correction in steering angle is directly proportional to the Cross track error (CTE). After implementing P controller, the vehicle steers when it encounters the curve. The P controller tries to minimize the CTE but as soon as the vehicle reaches the center of the road, it overshoots. As it overshoots, the P controller again tries to steer the vehicle in opposite direction. Due to this we get an oscillating motion of the vehicle where it oscillates around the center of the road.
 * **I Controller** : The I controller takes care of the error accumulated over time. Say for example the car steering could be offset by some amount which would result in the car driving off of the center of lane. The I controller introduces a correction value which is proportional to the summation of the error. This helps in reducing the steady state error.
@@ -21,7 +19,7 @@ I tuned the hyperparameters manually. Initiallt I started out with -[0.1, 0.001,
 
 ## Simulation
 ### The vehicle must successfully drive a lap around the track.
-The vehicle drove successfully around the track without leaving the driveable portion of the road. [Here](CarND-PID-Control-Project-master/nikhil PID project.mp4 ) is the video of the vehicle driving around the track.
+The vehicle drove successfully around the track without leaving the driveable portion of the road. [Here](https://github.com/nikhil-sinnarkar/CarND-PID-Control-Project-master/blob/master/nikhil%20PID%20project.mp4) is the video of the vehicle driving around the track.
 
 ---
 
